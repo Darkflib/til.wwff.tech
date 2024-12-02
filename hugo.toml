@@ -1,0 +1,4 @@
+baseURL = 'https://til.wwff.tech/'
+languageCode = 'en-gb'
+title = "DarkFlib's Today I Learned"
+theme = 'ananke'

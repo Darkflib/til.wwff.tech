@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Uv Is Cool | DarkFlib&#39;s Today I Learned</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Uv is actually pretty cool
+Most people are familiar with pip in Python. It&rsquo;s a package manager that lets you install packages from the Python Package Index (PyPI)&hellip; and elsewhere.
+The one drawback is that pip is slow. It&rsquo;s written in Python, and it&rsquo;s not the fastest thing in the world.
+Enter Uv. Uv is a package manager that is written in Rust, and it&rsquo;s fast. It&rsquo;s really fast.
+It also integrates nicely with pyproject.toml, so you can use it instead of Poetry or Pipenv if you want.">
+    <meta name="generator" content="Hugo 0.139.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/uv-is-cool/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/uv-is-cool/">
+  <meta property="og:site_name" content="DarkFlib&#39;s Today I Learned">
+  <meta property="og:title" content="Uv Is Cool">
+  <meta property="og:description" content="Uv is actually pretty cool Most people are familiar with pip in Python. It’s a package manager that lets you install packages from the Python Package Index (PyPI)… and elsewhere.
+The one drawback is that pip is slow. It’s written in Python, and it’s not the fastest thing in the world.
+Enter Uv. Uv is a package manager that is written in Rust, and it’s fast. It’s really fast.
+It also integrates nicely with pyproject.toml, so you can use it instead of Poetry or Pipenv if you want.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-02T21:32:59+00:00">
+    <meta property="article:modified_time" content="2024-12-02T21:32:59+00:00">
+
+  <meta itemprop="name" content="Uv Is Cool">
+  <meta itemprop="description" content="Uv is actually pretty cool Most people are familiar with pip in Python. It’s a package manager that lets you install packages from the Python Package Index (PyPI)… and elsewhere.
+The one drawback is that pip is slow. It’s written in Python, and it’s not the fastest thing in the world.
+Enter Uv. Uv is a package manager that is written in Rust, and it’s fast. It’s really fast.
+It also integrates nicely with pyproject.toml, so you can use it instead of Poetry or Pipenv if you want.">
+  <meta itemprop="datePublished" content="2024-12-02T21:32:59+00:00">
+  <meta itemprop="dateModified" content="2024-12-02T21:32:59+00:00">
+  <meta itemprop="wordCount" content="250">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Uv Is Cool">
+  <meta name="twitter:description" content="Uv is actually pretty cool Most people are familiar with pip in Python. It’s a package manager that lets you install packages from the Python Package Index (PyPI)… and elsewhere.
+The one drawback is that pip is slow. It’s written in Python, and it’s not the fastest thing in the world.
+Enter Uv. Uv is a package manager that is written in Rust, and it’s fast. It’s really fast.
+It also integrates nicely with pyproject.toml, so you can use it instead of Poetry or Pipenv if you want.">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        DarkFlib&#39;s Today I Learned
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Uv Is Cool</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-12-02T21:32:59Z">December 2, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><h2 id="uv-is-actually-pretty-cool">Uv is actually pretty cool</h2>
+<p>Most people are familiar with pip in Python. It&rsquo;s a package manager that lets you install packages from the Python Package Index (PyPI)&hellip; and elsewhere.</p>
+<p>The one drawback is that pip is slow. It&rsquo;s written in Python, and it&rsquo;s not the fastest thing in the world.</p>
+<p>Enter Uv. Uv is a package manager that is written in Rust, and it&rsquo;s fast. It&rsquo;s really fast.</p>
+<p>It also integrates nicely with pyproject.toml, so you can use it instead of Poetry or Pipenv if you want.</p>
+<p>You can install Uv by running (on mac):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install uv
+</span></span></code></pre></div><p>And then you can use it like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>uv add requests
+</span></span></code></pre></div><p>And that&rsquo;s it! You&rsquo;ve installed the requests package, and it is now available to use in your Python project and present in your pyproject.toml file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Usage: uv [OPTIONS] &lt;COMMAND&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Commands:
+</span></span><span style="display:flex;"><span>  run      Run a command or script
+</span></span><span style="display:flex;"><span>  init     Create a new project
+</span></span><span style="display:flex;"><span>  add      Add dependencies to the project
+</span></span><span style="display:flex;"><span>  remove   Remove dependencies from the project
+</span></span><span style="display:flex;"><span>  sync     Update the project&#39;s environment
+</span></span><span style="display:flex;"><span>  lock     Update the project&#39;s lockfile
+</span></span><span style="display:flex;"><span>  export   Export the project&#39;s lockfile to an alternate format
+</span></span><span style="display:flex;"><span>  tree     Display the project&#39;s dependency tree
+</span></span><span style="display:flex;"><span>  tool     Run and install commands provided by Python packages
+</span></span><span style="display:flex;"><span>  python   Manage Python versions and installations
+</span></span><span style="display:flex;"><span>  pip      Manage Python packages with a pip-compatible interface
+</span></span><span style="display:flex;"><span>  venv     Create a virtual environment
+</span></span><span style="display:flex;"><span>  build    Build Python packages into source distributions and wheels
+</span></span><span style="display:flex;"><span>  publish  Upload distributions to an index
+</span></span><span style="display:flex;"><span>  cache    Manage uv&#39;s cache
+</span></span><span style="display:flex;"><span>  self     Manage the uv executable
+</span></span><span style="display:flex;"><span>  version  Display uv&#39;s version
+</span></span><span style="display:flex;"><span>  help     Display documentation for a command
+</span></span></code></pre></div><ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  DarkFlib's Today I Learned 2024 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

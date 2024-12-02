@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on DarkFlib&#39;s Today I Learned</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on DarkFlib&#39;s Today I Learned</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 02 Dec 2024 21:32:59 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Uv Is Cool</title>
+      <link>http://localhost:1313/posts/uv-is-cool/</link>
+      <pubDate>Mon, 02 Dec 2024 21:32:59 +0000</pubDate>
+      <guid>http://localhost:1313/posts/uv-is-cool/</guid>
+      <description>&lt;h2 id=&#34;uv-is-actually-pretty-cool&#34;&gt;Uv is actually pretty cool&lt;/h2&gt;&#xA;&lt;p&gt;Most people are familiar with pip in Python. It&amp;rsquo;s a package manager that lets you install packages from the Python Package Index (PyPI)&amp;hellip; and elsewhere.&lt;/p&gt;&#xA;&lt;p&gt;The one drawback is that pip is slow. It&amp;rsquo;s written in Python, and it&amp;rsquo;s not the fastest thing in the world.&lt;/p&gt;&#xA;&lt;p&gt;Enter Uv. Uv is a package manager that is written in Rust, and it&amp;rsquo;s fast. It&amp;rsquo;s really fast.&lt;/p&gt;&#xA;&lt;p&gt;It also integrates nicely with pyproject.toml, so you can use it instead of Poetry or Pipenv if you want.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Model Context Protocol</title>
+      <link>http://localhost:1313/posts/model-context-protocol/</link>
+      <pubDate>Sun, 01 Dec 2024 21:09:19 +0000</pubDate>
+      <guid>http://localhost:1313/posts/model-context-protocol/</guid>
+      <description>&lt;h2 id=&#34;mcp-model-context-protocol-is-actually-pretty-cool&#34;&gt;MCP (Model Context Protocol) is actually pretty cool&lt;/h2&gt;&#xA;&lt;p&gt;Spec at modelcontextprotocol.io&lt;/p&gt;&#xA;&lt;p&gt;While right now only Claude desktop and a couple of other apps support it, it&amp;rsquo;s an elegant way to extend the capabilities of a LLM.&lt;/p&gt;&#xA;&lt;p&gt;You can think of it like a plugin system, but it solves a lot of the problems that come with plugins such as security, performance, and compatibility.&lt;/p&gt;&#xA;&lt;p&gt;Security in this case comes by having a small &amp;lsquo;server&amp;rsquo; that is separate from the main app, and that can be run in a sandbox (if needed). This server can be written in any language, and can even be run on a different machine than the main app (although right now, it isn&amp;rsquo;t really supported.)&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
