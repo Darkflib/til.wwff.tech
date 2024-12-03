@@ -1,5 +1,7 @@
 # DarkFlib's Today I Learned
 
+Published at [https://til.wwff.tech/](https://til.wwff.tech/)
+
 This is a collection of things I've learned in my day-to-day life. It's a mix of programming, system administration, and other things I find interesting.
 
 Reminder to self: I should write more often.
