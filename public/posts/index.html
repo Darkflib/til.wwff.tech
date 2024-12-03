@@ -45,8 +45,8 @@
   <meta property="og:type" content="website">
 
   <meta itemprop="name" content="Posts">
-  <meta itemprop="datePublished" content="2024-12-02T21:32:59+00:00">
-  <meta itemprop="dateModified" content="2024-12-02T21:32:59+00:00">
+  <meta itemprop="datePublished" content="2024-12-03T16:35:55+00:00">
+  <meta itemprop="dateModified" content="2024-12-03T16:35:55+00:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Posts">
 
@@ -95,16 +95,88 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="/posts/smartthings-cli/" class="link black dim">
+        Smartthings CLI
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      <h1 id="smartthings-cli">SmartThings CLI</h1>
+<p>Building my own integrations for smartthings, so I want some way to test things from my computer as opposed to having to sniff and decode app traffic from the phone.</p>
+<h2 id="install">Install</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install smartthingscommunity/smartthings/smartthings
+</span></span></code></pre></div><h2 id="commands">Commands</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Mike-MBP:miketest mike$ smartthings --help
+</span></span><span style="display:flex;"><span>Command Line Interface <span style="color:#66d9ef">for</span> the SmartThings APIs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>VERSION
+</span></span><span style="display:flex;"><span>  @smartthings/cli/1.10.2 darwin-x64 node-v18.5.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>USAGE
+</span></span><span style="display:flex;"><span>  $ smartthings <span style="color:#f92672">[</span>COMMAND<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TOPICS
+</span></span><span style="display:flex;"><span>  apps               get a specific app or a list of apps
+</span></span><span style="display:flex;"><span>  capabilities       get a specific capability or a list of capabilities
+</span></span><span style="display:flex;"><span>  config             list config file entries
+</span></span><span style="display:flex;"><span>  devicepreferences  list device preferences or get information <span style="color:#66d9ef">for</span> a specific device preference
+</span></span><span style="display:flex;"><span>  deviceprofiles     list all device profiles available in a user account or retrieve a single profile
+</span></span><span style="display:flex;"><span>  devices            list all devices available in a user account or retrieve a single device
+</span></span><span style="display:flex;"><span>  edge
+</span></span><span style="display:flex;"><span>  installedapps      get a specific app or a list of apps
+</span></span><span style="display:flex;"><span>  installedschema    get a specific schema connector instance or a list of instances
+</span></span><span style="display:flex;"><span>  invites            list invitations <span style="color:#66d9ef">for</span> a schema app
+</span></span><span style="display:flex;"><span>  locations          list locations or get information <span style="color:#66d9ef">for</span> a specific Location
+</span></span><span style="display:flex;"><span>  organizations      list all organizations the user belongs to
+</span></span><span style="display:flex;"><span>  plugins            List installed plugins.
+</span></span><span style="display:flex;"><span>  presentation       query device presentation by vid
+</span></span><span style="display:flex;"><span>  rules              get a specific rule
+</span></span><span style="display:flex;"><span>  scenes             list scenes or get information <span style="color:#66d9ef">for</span> a specific scene
+</span></span><span style="display:flex;"><span>  schema             list all ST Schema Apps currently available in a user account
+</span></span><span style="display:flex;"><span>  virtualdevices     list all virtual devices available in a user account or retrieve a single device
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>COMMANDS
+</span></span><span style="display:flex;"><span>  apps               get a specific app or a list of apps
+</span></span><span style="display:flex;"><span>  autocomplete       display autocomplete installation instructions
+</span></span><span style="display:flex;"><span>  capabilities       get a specific capability or a list of capabilities
+</span></span><span style="display:flex;"><span>  config             list config file entries
+</span></span><span style="display:flex;"><span>  devicepreferences  list device preferences or get information <span style="color:#66d9ef">for</span> a specific device preference
+</span></span><span style="display:flex;"><span>  deviceprofiles     list all device profiles available in a user account or retrieve a single profile
+</span></span><span style="display:flex;"><span>  devices            list all devices available in a user account or retrieve a single device
+</span></span><span style="display:flex;"><span>  help               Display help <span style="color:#66d9ef">for</span> smartthings.
+</span></span><span style="display:flex;"><span>  installedapps      get a specific app or a list of apps
+</span></span><span style="display:flex;"><span>  installedschema    get a specific schema connector instance or a list of instances
+</span></span><span style="display:flex;"><span>  locations          list locations or get information <span style="color:#66d9ef">for</span> a specific Location
+</span></span><span style="display:flex;"><span>  logout
+</span></span><span style="display:flex;"><span>  organizations      list all organizations the user belongs to
+</span></span><span style="display:flex;"><span>  plugins            List installed plugins.
+</span></span><span style="display:flex;"><span>  presentation       query device presentation by vid
+</span></span><span style="display:flex;"><span>  rules              get a specific rule
+</span></span><span style="display:flex;"><span>  scenes             list scenes or get information <span style="color:#66d9ef">for</span> a specific scene
+</span></span><span style="display:flex;"><span>  schema             list all ST Schema Apps currently available in a user account
+</span></span><span style="display:flex;"><span>  virtualdevices     list all virtual devices available in a user account or retrieve a single device
+</span></span></code></pre></div><h2 id="login">Login</h2>
+<p>No actual login method, so it puts you through the login flow on first command.</p>
+    </div>
+    <a href="/posts/smartthings-cli/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="/posts/uv-is-cool/" class="link black dim">
         Uv Is Cool
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h2 id="uv-is-actually-pretty-cool">Uv is actually pretty cool</h2>
+      <h2 id="uv-is-actually-pretty-cool-and-fast">Uv is actually pretty cool and fast</h2>
 <p>Most people are familiar with pip in Python. It&rsquo;s a package manager that lets you install packages from the Python Package Index (PyPI)&hellip; and elsewhere.</p>
 <p>The one drawback is that pip is slow. It&rsquo;s written in Python, and it&rsquo;s not the fastest thing in the world.</p>
 <p>Enter Uv. Uv is a package manager that is written in Rust, and it&rsquo;s fast. It&rsquo;s really fast.</p>
-<p>It also integrates nicely with pyproject.toml, so you can use it instead of Poetry or Pipenv if you want.</p>
     </div>
     <a href="/posts/uv-is-cool/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
   </div>
@@ -122,8 +194,8 @@
       </a>
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
-      <h2 id="mcp-model-context-protocol-is-actually-pretty-cool">MCP (Model Context Protocol) is actually pretty cool</h2>
-<p>Spec at modelcontextprotocol.io</p>
+      <h2 id="mcp-model-context-protocol">MCP (Model Context Protocol)</h2>
+<p>Spec at <a href="https://modelcontextprotocol.io/">modelcontextprotocol.io</a></p>
 <p>While right now only Claude desktop and a couple of other apps support it, it&rsquo;s an elegant way to extend the capabilities of a LLM.</p>
 <p>You can think of it like a plugin system, but it solves a lot of the problems that come with plugins such as security, performance, and compatibility.</p>
 <p>Security in this case comes by having a small &lsquo;server&rsquo; that is separate from the main app, and that can be run in a sandbox (if needed). This server can be written in any language, and can even be run on a different machine than the main app (although right now, it isn&rsquo;t really supported.)</p>

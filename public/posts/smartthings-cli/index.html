@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Smartthings CLI | DarkFlib&#39;s Today I Learned</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Building my own integrations for smartthings, so I want some way to test things from my computer as opposed to having to sniff and decode app traffic from the phone.
+I found this CLI tool that seems to do what I want. It isn&rsquo;t the most user friendly but it seems to work well. I mean, if you want user friendly, you can use the app. ;)
+Install
+brew install smartthingscommunity/smartthings/smartthings
+Commands
+Mike-MBP:miketest mike$ smartthings --help
+Command Line Interface for the SmartThings APIs
+
+VERSION
+  @smartthings/cli/1.10.2 darwin-x64 node-v18.5.0
+
+USAGE
+  $ smartthings [COMMAND]
+
+TOPICS
+  apps               get a specific app or a list of apps
+  capabilities       get a specific capability or a list of capabilities
+  config             list config file entries
+  devicepreferences  list device preferences or get information for a specific device preference
+  deviceprofiles     list all device profiles available in a user account or retrieve a single profile
+  devices            list all devices available in a user account or retrieve a single device
+  edge
+  installedapps      get a specific app or a list of apps
+  installedschema    get a specific schema connector instance or a list of instances
+  invites            list invitations for a schema app
+  locations          list locations or get information for a specific Location
+  organizations      list all organizations the user belongs to
+  plugins            List installed plugins.
+  presentation       query device presentation by vid
+  rules              get a specific rule
+  scenes             list scenes or get information for a specific scene
+  schema             list all ST Schema Apps currently available in a user account
+  virtualdevices     list all virtual devices available in a user account or retrieve a single device
+
+COMMANDS
+  apps               get a specific app or a list of apps
+  autocomplete       display autocomplete installation instructions
+  capabilities       get a specific capability or a list of capabilities
+  config             list config file entries
+  devicepreferences  list device preferences or get information for a specific device preference
+  deviceprofiles     list all device profiles available in a user account or retrieve a single profile
+  devices            list all devices available in a user account or retrieve a single device
+  help               Display help for smartthings.
+  installedapps      get a specific app or a list of apps
+  installedschema    get a specific schema connector instance or a list of instances
+  locations          list locations or get information for a specific Location
+  logout
+  organizations      list all organizations the user belongs to
+  plugins            List installed plugins.
+  presentation       query device presentation by vid
+  rules              get a specific rule
+  scenes             list scenes or get information for a specific scene
+  schema             list all ST Schema Apps currently available in a user account
+  virtualdevices     list all virtual devices available in a user account or retrieve a single device
+Login
+No actual login method, so it puts you through the login flow on first command.">
+    <meta name="generator" content="Hugo 0.139.3">
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+
+    
+      
+
+    
+
+    
+
+    
+      <link rel="canonical" href="http://localhost:1313/posts/smartthings-cli/">
+    
+
+    <meta property="og:url" content="http://localhost:1313/posts/smartthings-cli/">
+  <meta property="og:site_name" content="DarkFlib&#39;s Today I Learned">
+  <meta property="og:title" content="Smartthings CLI">
+  <meta property="og:description" content="Building my own integrations for smartthings, so I want some way to test things from my computer as opposed to having to sniff and decode app traffic from the phone.
+I found this CLI tool that seems to do what I want. It isn’t the most user friendly but it seems to work well. I mean, if you want user friendly, you can use the app. ;)
+Install brew install smartthingscommunity/smartthings/smartthings Commands Mike-MBP:miketest mike$ smartthings --help Command Line Interface for the SmartThings APIs VERSION @smartthings/cli/1.10.2 darwin-x64 node-v18.5.0 USAGE $ smartthings [COMMAND] TOPICS apps get a specific app or a list of apps capabilities get a specific capability or a list of capabilities config list config file entries devicepreferences list device preferences or get information for a specific device preference deviceprofiles list all device profiles available in a user account or retrieve a single profile devices list all devices available in a user account or retrieve a single device edge installedapps get a specific app or a list of apps installedschema get a specific schema connector instance or a list of instances invites list invitations for a schema app locations list locations or get information for a specific Location organizations list all organizations the user belongs to plugins List installed plugins. presentation query device presentation by vid rules get a specific rule scenes list scenes or get information for a specific scene schema list all ST Schema Apps currently available in a user account virtualdevices list all virtual devices available in a user account or retrieve a single device COMMANDS apps get a specific app or a list of apps autocomplete display autocomplete installation instructions capabilities get a specific capability or a list of capabilities config list config file entries devicepreferences list device preferences or get information for a specific device preference deviceprofiles list all device profiles available in a user account or retrieve a single profile devices list all devices available in a user account or retrieve a single device help Display help for smartthings. installedapps get a specific app or a list of apps installedschema get a specific schema connector instance or a list of instances locations list locations or get information for a specific Location logout organizations list all organizations the user belongs to plugins List installed plugins. presentation query device presentation by vid rules get a specific rule scenes list scenes or get information for a specific scene schema list all ST Schema Apps currently available in a user account virtualdevices list all virtual devices available in a user account or retrieve a single device Login No actual login method, so it puts you through the login flow on first command.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-03T16:35:55+00:00">
+    <meta property="article:modified_time" content="2024-12-03T16:35:55+00:00">
+
+  <meta itemprop="name" content="Smartthings CLI">
+  <meta itemprop="description" content="Building my own integrations for smartthings, so I want some way to test things from my computer as opposed to having to sniff and decode app traffic from the phone.
+I found this CLI tool that seems to do what I want. It isn’t the most user friendly but it seems to work well. I mean, if you want user friendly, you can use the app. ;)
+Install brew install smartthingscommunity/smartthings/smartthings Commands Mike-MBP:miketest mike$ smartthings --help Command Line Interface for the SmartThings APIs VERSION @smartthings/cli/1.10.2 darwin-x64 node-v18.5.0 USAGE $ smartthings [COMMAND] TOPICS apps get a specific app or a list of apps capabilities get a specific capability or a list of capabilities config list config file entries devicepreferences list device preferences or get information for a specific device preference deviceprofiles list all device profiles available in a user account or retrieve a single profile devices list all devices available in a user account or retrieve a single device edge installedapps get a specific app or a list of apps installedschema get a specific schema connector instance or a list of instances invites list invitations for a schema app locations list locations or get information for a specific Location organizations list all organizations the user belongs to plugins List installed plugins. presentation query device presentation by vid rules get a specific rule scenes list scenes or get information for a specific scene schema list all ST Schema Apps currently available in a user account virtualdevices list all virtual devices available in a user account or retrieve a single device COMMANDS apps get a specific app or a list of apps autocomplete display autocomplete installation instructions capabilities get a specific capability or a list of capabilities config list config file entries devicepreferences list device preferences or get information for a specific device preference deviceprofiles list all device profiles available in a user account or retrieve a single profile devices list all devices available in a user account or retrieve a single device help Display help for smartthings. installedapps get a specific app or a list of apps installedschema get a specific schema connector instance or a list of instances locations list locations or get information for a specific Location logout organizations list all organizations the user belongs to plugins List installed plugins. presentation query device presentation by vid rules get a specific rule scenes list scenes or get information for a specific scene schema list all ST Schema Apps currently available in a user account virtualdevices list all virtual devices available in a user account or retrieve a single device Login No actual login method, so it puts you through the login flow on first command.">
+  <meta itemprop="datePublished" content="2024-12-03T16:35:55+00:00">
+  <meta itemprop="dateModified" content="2024-12-03T16:35:55+00:00">
+  <meta itemprop="wordCount" content="1020">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Smartthings CLI">
+  <meta name="twitter:description" content="Building my own integrations for smartthings, so I want some way to test things from my computer as opposed to having to sniff and decode app traffic from the phone.
+I found this CLI tool that seems to do what I want. It isn’t the most user friendly but it seems to work well. I mean, if you want user friendly, you can use the app. ;)
+Install brew install smartthingscommunity/smartthings/smartthings Commands Mike-MBP:miketest mike$ smartthings --help Command Line Interface for the SmartThings APIs VERSION @smartthings/cli/1.10.2 darwin-x64 node-v18.5.0 USAGE $ smartthings [COMMAND] TOPICS apps get a specific app or a list of apps capabilities get a specific capability or a list of capabilities config list config file entries devicepreferences list device preferences or get information for a specific device preference deviceprofiles list all device profiles available in a user account or retrieve a single profile devices list all devices available in a user account or retrieve a single device edge installedapps get a specific app or a list of apps installedschema get a specific schema connector instance or a list of instances invites list invitations for a schema app locations list locations or get information for a specific Location organizations list all organizations the user belongs to plugins List installed plugins. presentation query device presentation by vid rules get a specific rule scenes list scenes or get information for a specific scene schema list all ST Schema Apps currently available in a user account virtualdevices list all virtual devices available in a user account or retrieve a single device COMMANDS apps get a specific app or a list of apps autocomplete display autocomplete installation instructions capabilities get a specific capability or a list of capabilities config list config file entries devicepreferences list device preferences or get information for a specific device preference deviceprofiles list all device profiles available in a user account or retrieve a single profile devices list all devices available in a user account or retrieve a single device help Display help for smartthings. installedapps get a specific app or a list of apps installedschema get a specific schema connector instance or a list of instances locations list locations or get information for a specific Location logout organizations list all organizations the user belongs to plugins List installed plugins. presentation query device presentation by vid rules get a specific rule scenes list scenes or get information for a specific scene schema list all ST Schema Apps currently available in a user account virtualdevices list all virtual devices available in a user account or retrieve a single device Login No actual login method, so it puts you through the login flow on first command.">
+
+	
+  </head><body class="ma0 avenir bg-near-white development">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        DarkFlib&#39;s Today I Learned
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      <div class="ananke-socials"></div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked ttu">
+          
+        Posts
+      </aside><div id="sharing" class="mt3 ananke-socials"></div>
+<h1 class="f1 athelas mt3 mb1">Smartthings CLI</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2024-12-03T16:35:55Z">December 3, 2024</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Building my own integrations for smartthings, so I want some way to test things from my computer as opposed to having to sniff and decode app traffic from the phone.</p>
+<p>I found this CLI tool that seems to do what I want. It isn&rsquo;t the most user friendly but it seems to work well. I mean, if you want user friendly, you can use the app. ;)</p>
+<h2 id="install">Install</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install smartthingscommunity/smartthings/smartthings
+</span></span></code></pre></div><h2 id="commands">Commands</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Mike-MBP:miketest mike$ smartthings --help
+</span></span><span style="display:flex;"><span>Command Line Interface <span style="color:#66d9ef">for</span> the SmartThings APIs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>VERSION
+</span></span><span style="display:flex;"><span>  @smartthings/cli/1.10.2 darwin-x64 node-v18.5.0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>USAGE
+</span></span><span style="display:flex;"><span>  $ smartthings <span style="color:#f92672">[</span>COMMAND<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>TOPICS
+</span></span><span style="display:flex;"><span>  apps               get a specific app or a list of apps
+</span></span><span style="display:flex;"><span>  capabilities       get a specific capability or a list of capabilities
+</span></span><span style="display:flex;"><span>  config             list config file entries
+</span></span><span style="display:flex;"><span>  devicepreferences  list device preferences or get information <span style="color:#66d9ef">for</span> a specific device preference
+</span></span><span style="display:flex;"><span>  deviceprofiles     list all device profiles available in a user account or retrieve a single profile
+</span></span><span style="display:flex;"><span>  devices            list all devices available in a user account or retrieve a single device
+</span></span><span style="display:flex;"><span>  edge
+</span></span><span style="display:flex;"><span>  installedapps      get a specific app or a list of apps
+</span></span><span style="display:flex;"><span>  installedschema    get a specific schema connector instance or a list of instances
+</span></span><span style="display:flex;"><span>  invites            list invitations <span style="color:#66d9ef">for</span> a schema app
+</span></span><span style="display:flex;"><span>  locations          list locations or get information <span style="color:#66d9ef">for</span> a specific Location
+</span></span><span style="display:flex;"><span>  organizations      list all organizations the user belongs to
+</span></span><span style="display:flex;"><span>  plugins            List installed plugins.
+</span></span><span style="display:flex;"><span>  presentation       query device presentation by vid
+</span></span><span style="display:flex;"><span>  rules              get a specific rule
+</span></span><span style="display:flex;"><span>  scenes             list scenes or get information <span style="color:#66d9ef">for</span> a specific scene
+</span></span><span style="display:flex;"><span>  schema             list all ST Schema Apps currently available in a user account
+</span></span><span style="display:flex;"><span>  virtualdevices     list all virtual devices available in a user account or retrieve a single device
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>COMMANDS
+</span></span><span style="display:flex;"><span>  apps               get a specific app or a list of apps
+</span></span><span style="display:flex;"><span>  autocomplete       display autocomplete installation instructions
+</span></span><span style="display:flex;"><span>  capabilities       get a specific capability or a list of capabilities
+</span></span><span style="display:flex;"><span>  config             list config file entries
+</span></span><span style="display:flex;"><span>  devicepreferences  list device preferences or get information <span style="color:#66d9ef">for</span> a specific device preference
+</span></span><span style="display:flex;"><span>  deviceprofiles     list all device profiles available in a user account or retrieve a single profile
+</span></span><span style="display:flex;"><span>  devices            list all devices available in a user account or retrieve a single device
+</span></span><span style="display:flex;"><span>  help               Display help <span style="color:#66d9ef">for</span> smartthings.
+</span></span><span style="display:flex;"><span>  installedapps      get a specific app or a list of apps
+</span></span><span style="display:flex;"><span>  installedschema    get a specific schema connector instance or a list of instances
+</span></span><span style="display:flex;"><span>  locations          list locations or get information <span style="color:#66d9ef">for</span> a specific Location
+</span></span><span style="display:flex;"><span>  logout
+</span></span><span style="display:flex;"><span>  organizations      list all organizations the user belongs to
+</span></span><span style="display:flex;"><span>  plugins            List installed plugins.
+</span></span><span style="display:flex;"><span>  presentation       query device presentation by vid
+</span></span><span style="display:flex;"><span>  rules              get a specific rule
+</span></span><span style="display:flex;"><span>  scenes             list scenes or get information <span style="color:#66d9ef">for</span> a specific scene
+</span></span><span style="display:flex;"><span>  schema             list all ST Schema Apps currently available in a user account
+</span></span><span style="display:flex;"><span>  virtualdevices     list all virtual devices available in a user account or retrieve a single device
+</span></span></code></pre></div><h2 id="login">Login</h2>
+<p>No actual login method, so it puts you through the login flow on first command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Mike-MBP:miketest mike$ smartthings devices
+</span></span><span style="display:flex;"><span>logging in... <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">#   Label                  Name                                Type    Device Id</span>
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">1</span>   Bedroom main light     rgbw-color-bulb-2500-6500K          VIPER   bf0106b8-3444-4980-a021-47a14245d444
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span>   Desk lamp <span style="color:#ae81ff">2</span>            rgbw-color-bulb-2200-6500K          VIPER   638d812a-6a79-45bd-ac2b-4011780363b4
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">3</span>   Grey desklamp          rgbw-color-bulb-2200-6500K          VIPER   970d3d65-a185-43ca-87d9-66f89f336f6b
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">4</span>   Landing light          rgbw-color-bulb-2500-6500K          VIPER   f1c9561c-f613-41b4-ba2f-e1aa5b69613b
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">5</span>   Lounge <span style="color:#ae81ff">1</span>               rgbw-color-bulb-2500-6500K          VIPER   b5573928-49a5-42f7-bd2c-c0d3eca74c6d
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">6</span>   Lounge <span style="color:#ae81ff">2</span>               rgbw-color-bulb-2500-6500K          VIPER   e6e4eb3b-3120-4c41-a1b0-f90ccd7a5304
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">7</span>   Pixel <span style="color:#ae81ff">8</span> Pro            Pixel <span style="color:#ae81ff">8</span> Pro                         MOBILE  b8b5b35c-f1d0-46cd-97da-78988d6a0b5a
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8</span>   Samsung <span style="color:#ae81ff">7</span> Series <span style="color:#f92672">(</span>55<span style="color:#f92672">)</span>  Samsung <span style="color:#ae81ff">7</span> Series <span style="color:#f92672">(</span>55<span style="color:#f92672">)</span>               OCF     6453db03-988a-73fd-08cb-f1c48c028af2
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">9</span>   Smart Plug <span style="color:#ae81ff">2</span>           plug-energy-usage-report            VIPER   1db8b73b-9e49-46a7-9688-04cf34a90a62
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">10</span>  Smart Plug <span style="color:#ae81ff">3</span>           plug-energy-usage-report            VIPER   b83a6ef2-3ac5-41a4-8d4a-91f08416300c
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">11</span>  Stained glass lamp     plug-energy-usage-report            VIPER   14b2e107-e746-4eab-82fc-511b634d0869
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">12</span>  Stairs                 rgbw-color-bulb-2500-6500K          VIPER   6c14b79c-7a5d-4976-a838-eea0ee8f9d9b
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">13</span>  Table lamp             plug-energy-usage-report            VIPER   7acbe645-01e4-4a4c-920b-dc0fcc5ad4b0
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">14</span>  Tapo_C225_LivingRoom   c2c-tplink-camera                   VIPER   a3ddbff6-aaa0-4fd8-a197-b218b6ae44ed
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">15</span>  Tapo_C320WS_Alley      c2c-tplink-camera-motion            VIPER   ab6366f8-2e1c-41d4-a2f1-10db9d9ffac7
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">16</span>  Tapo_C500_003D         c2c-tplink-camera-motion            VIPER   0017848c-9cd0-498b-8744-ff2584253f3e
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">17</span>  Tapo_C500_DADE         c2c-tplink-camera-motion            VIPER   4318fd2e-9093-4389-8b69-e2494bde954b
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">18</span>  Tapo_D210_Doorbell     c2c-tplink-doorbell-motion-battery  VIPER   31a7311b-4972-4498-b7ad-9b2f7c6c339b
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">19</span>  Tapo_Hub_A2E0          c2c-tplink-hub                      VIPER   dbaf16ba-98be-4d9e-a15a-6a7a1567c81c
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span></code></pre></div><h2 id="state">State</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Mike-MBP:miketest mike$ smartthings devices 7acbe645-01e4-4a4c-920b-dc0fcc5ad4b0
+</span></span><span style="display:flex;"><span>Main Info
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> Label              Table lamp
+</span></span><span style="display:flex;"><span> Name               plug-energy-usage-report
+</span></span><span style="display:flex;"><span> Id                 7acbe645-01e4-4a4c-920b-dc0fcc5ad4b0
+</span></span><span style="display:flex;"><span> Type               VIPER
+</span></span><span style="display:flex;"><span> Manufacturer Code  TP-Link
+</span></span><span style="display:flex;"><span> Location Id        40866f80-0be4-4964-bd60-88a18579ed32
+</span></span><span style="display:flex;"><span> Room Id            bb5ee6c5-fb76-4548-92bc-ca4ec44b00b3
+</span></span><span style="display:flex;"><span> Profile Id         a25b207e-cbb9-40ae-8a88-906637c22ab6
+</span></span><span style="display:flex;"><span> Capabilities       healthCheck
+</span></span><span style="display:flex;"><span>                    refresh
+</span></span><span style="display:flex;"><span>                    switch
+</span></span><span style="display:flex;"><span>                    powerConsumptionReport
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Device Integration Info <span style="color:#f92672">(</span>from viper<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> Unique Identifier  8022EE9C484019085ED8CB45695D20AF230697EC
+</span></span><span style="display:flex;"><span> Manufacturer Name  TP-Link
+</span></span><span style="display:flex;"><span> Model Name         P110   
+</span></span><span style="display:flex;"><span> Sw Version         1.3.1 Build <span style="color:#ae81ff">240621</span> Rel.162048
+</span></span><span style="display:flex;"><span> Hw Version         1.0    
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────────
+</span></span></code></pre></div><h2 id="capabilities">Capabilities</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Mike-MBP:miketest mike$ smartthings devices:capability-status 7acbe645-01e4-4a4c-920b-dc0fcc5ad4b0
+</span></span><span style="display:flex;"><span>───────────────────────────
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">#  Id</span>
+</span></span><span style="display:flex;"><span>───────────────────────────
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">1</span>  healthCheck
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span>  powerConsumptionReport
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">3</span>  refresh
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">4</span>  switch
+</span></span><span style="display:flex;"><span>───────────────────────────
+</span></span><span style="display:flex;"><span>? Select a capability. <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>────────────────────────────────────
+</span></span><span style="display:flex;"><span> Attribute                 Value
+</span></span><span style="display:flex;"><span> checkInterval             <span style="color:#ae81ff">60</span> s
+</span></span><span style="display:flex;"><span> healthStatus
+</span></span><span style="display:flex;"><span> DeviceWatch-Enroll
+</span></span><span style="display:flex;"><span> DeviceWatch-DeviceStatus  <span style="color:#e6db74">&#34;online&#34;</span>
+</span></span><span style="display:flex;"><span>────────────────────────────────────
+</span></span></code></pre></div><h2 id="capabilities-status">Capabilities Status</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Mike-MBP:miketest mike$ smartthings devices:capability-status 7acbe645-01e4-4a4c-920b-dc0fcc5ad4b0
+</span></span><span style="display:flex;"><span>───────────────────────────
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">#  Id</span>
+</span></span><span style="display:flex;"><span>───────────────────────────
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">1</span>  healthCheck
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span>  powerConsumptionReport
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">3</span>  refresh
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">4</span>  switch
+</span></span><span style="display:flex;"><span>───────────────────────────
+</span></span><span style="display:flex;"><span>? Select a capability. <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>──────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> Attribute         Value
+</span></span><span style="display:flex;"><span> powerConsumption  <span style="color:#f92672">{</span>    
+</span></span><span style="display:flex;"><span>                     <span style="color:#e6db74">&#34;start&#34;</span>: <span style="color:#e6db74">&#34;2024-12-03T15:15:59.764Z&#34;</span>,
+</span></span><span style="display:flex;"><span>                     <span style="color:#e6db74">&#34;end&#34;</span>: <span style="color:#e6db74">&#34;2024-12-03T15:30:59.765Z&#34;</span>,
+</span></span><span style="display:flex;"><span>                     <span style="color:#e6db74">&#34;energy&#34;</span>: 117,
+</span></span><span style="display:flex;"><span>                     <span style="color:#e6db74">&#34;deltaEnergy&#34;</span>: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>                   <span style="color:#f92672">}</span>    
+</span></span><span style="display:flex;"><span>──────────────────────────────────────────────────────────
+</span></span></code></pre></div><h2 id="commands---switch-on">Commands - Switch On</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Mike-MBP:miketest mike$ smartthings devices:commands 7acbe645-01e4-4a4c-920b-dc0fcc5ad4b0 switch:on
+</span></span><span style="display:flex;"><span>Command executed successfully
+</span></span></code></pre></div><h2 id="setting-brightnesshue-etc">Setting Brightness/Hue etc</h2>
+<p>Most of these are 0-100.There is a check that they are not below 0, but anything above 100 is silently capped at 100.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Mike-MBP:miketest mike$ smartthings devices:commands b5573928-49a5-42f7-bd2c-c0d3eca74c6d <span style="color:#e6db74">&#39;switchLevel:setLevel(50)&#39;</span>
+</span></span><span style="display:flex;"><span>Command executed successfully
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Mike-MBP:miketest mike$ smartthings devices:commands b5573928-49a5-42f7-bd2c-c0d3eca74c6d <span style="color:#e6db74">&#39;colorControl:setHue(33)&#39;</span>
+</span></span><span style="display:flex;"><span>Command executed successfully
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Mike-MBP:miketest mike$ smartthings devices:commands b5573928-49a5-42f7-bd2c-c0d3eca74c6d <span style="color:#e6db74">&#39;colorControl:setSaturation(100)&#39;</span>
+</span></span><span style="display:flex;"><span>Command executed successfully
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Mike-MBP:miketest mike$ smartthings devices:health
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">#   Label                  Name                                Type    Device Id</span>
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">1</span>   Bedroom main light     rgbw-color-bulb-2500-6500K          VIPER   bf0106b8-3444-4980-a021-47a14245d444
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">2</span>   Desk lamp <span style="color:#ae81ff">2</span>            rgbw-color-bulb-2200-6500K          VIPER   638d812a-6a79-45bd-ac2b-4011780363b4
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">3</span>   Grey desklamp          rgbw-color-bulb-2200-6500K          VIPER   970d3d65-a185-43ca-87d9-66f89f336f6b
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">4</span>   Landing light          rgbw-color-bulb-2500-6500K          VIPER   f1c9561c-f613-41b4-ba2f-e1aa5b69613b
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">5</span>   Lounge <span style="color:#ae81ff">1</span>               rgbw-color-bulb-2500-6500K          VIPER   b5573928-49a5-42f7-bd2c-c0d3eca74c6d
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">6</span>   Lounge <span style="color:#ae81ff">2</span>               rgbw-color-bulb-2500-6500K          VIPER   e6e4eb3b-3120-4c41-a1b0-f90ccd7a5304
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">7</span>   Pixel <span style="color:#ae81ff">8</span> Pro            Pixel <span style="color:#ae81ff">8</span> Pro                         MOBILE  b8b5b35c-f1d0-46cd-97da-78988d6a0b5a
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">8</span>   Samsung <span style="color:#ae81ff">7</span> Series <span style="color:#f92672">(</span>55<span style="color:#f92672">)</span>  Samsung <span style="color:#ae81ff">7</span> Series <span style="color:#f92672">(</span>55<span style="color:#f92672">)</span>               OCF     6453db03-988a-73fd-08cb-f1c48c028af2
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">9</span>   Smart Plug <span style="color:#ae81ff">2</span>           plug-energy-usage-report            VIPER   1db8b73b-9e49-46a7-9688-04cf34a90a62
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">10</span>  Smart Plug <span style="color:#ae81ff">3</span>           plug-energy-usage-report            VIPER   b83a6ef2-3ac5-41a4-8d4a-91f08416300c
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">11</span>  Stained glass lamp     plug-energy-usage-report            VIPER   14b2e107-e746-4eab-82fc-511b634d0869
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">12</span>  Stairs                 rgbw-color-bulb-2500-6500K          VIPER   6c14b79c-7a5d-4976-a838-eea0ee8f9d9b
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">13</span>  Table lamp             plug-energy-usage-report            VIPER   7acbe645-01e4-4a4c-920b-dc0fcc5ad4b0
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">14</span>  Tapo_C225_LivingRoom   c2c-tplink-camera                   VIPER   a3ddbff6-aaa0-4fd8-a197-b218b6ae44ed
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">15</span>  Tapo_C320WS_Alley      c2c-tplink-camera-motion            VIPER   ab6366f8-2e1c-41d4-a2f1-10db9d9ffac7
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">16</span>  Tapo_C500_003D         c2c-tplink-camera-motion            VIPER   0017848c-9cd0-498b-8744-ff2584253f3e
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">17</span>  Tapo_C500_DADE         c2c-tplink-camera-motion            VIPER   4318fd2e-9093-4389-8b69-e2494bde954b
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">18</span>  Tapo_D210_Doorbell     c2c-tplink-doorbell-motion-battery  VIPER   31a7311b-4972-4498-b7ad-9b2f7c6c339b
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">19</span>  Tapo_Hub_A2E0          c2c-tplink-hub                      VIPER   dbaf16ba-98be-4d9e-a15a-6a7a1567c81c
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span>? Select a device. <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> Device Id          b5573928-49a5-42f7-bd2c-c0d3eca74c6d
+</span></span><span style="display:flex;"><span> State              ONLINE
+</span></span><span style="display:flex;"><span> Last Updated Date  2024-12-03T15:54:50.616Z
+</span></span><span style="display:flex;"><span>─────────────────────────────────────────────────────────
+</span></span></code></pre></div><h2 id="status">Status</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Mike-MBP:miketest mike$ smartthings devices:status b5573928-49a5-42f7-bd2c-c0d3eca74c6d
+</span></span><span style="display:flex;"><span>──────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span> Capability        Attribute                 Value
+</span></span><span style="display:flex;"><span> colorControl      saturation                <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span> colorControl      color
+</span></span><span style="display:flex;"><span> colorControl      hue                       <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span> healthCheck       checkInterval             <span style="color:#ae81ff">60</span> s
+</span></span><span style="display:flex;"><span> healthCheck       healthStatus
+</span></span><span style="display:flex;"><span> healthCheck       DeviceWatch-Enroll
+</span></span><span style="display:flex;"><span> healthCheck       DeviceWatch-DeviceStatus  <span style="color:#e6db74">&#34;online&#34;</span>
+</span></span><span style="display:flex;"><span> switchLevel       levelRange
+</span></span><span style="display:flex;"><span> switchLevel       level                     <span style="color:#ae81ff">100</span> %
+</span></span><span style="display:flex;"><span> switch            switch                    <span style="color:#e6db74">&#34;on&#34;</span>
+</span></span><span style="display:flex;"><span> colorTemperature  colorTemperatureRange
+</span></span><span style="display:flex;"><span> colorTemperature  colorTemperature          <span style="color:#ae81ff">6000</span> K
+</span></span><span style="display:flex;"><span>──────────────────────────────────────────────────────
+</span></span></code></pre></div><h2 id="logging">Logging</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tail -F ~/Library/Caches/<span style="color:#ae81ff">\@</span>smartthings/cli/*.log
+</span></span></code></pre></div><h2 id="debugging">Debugging</h2>
+<p>You can turn on debug output for the app by setting an environment variable. This gives you debug output from the login and request (and possibly other things)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>SMARTTHINGS_DEBUG<span style="color:#f92672">=</span>true smartthings devices:commands b5573928-49a5-42f7-bd2c-c0d3eca74c6d <span style="color:#e6db74">&#39;switchLevel:setLevel(10)&#39;</span>
+</span></span></code></pre></div><ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://localhost:1313/" >
+    &copy;  DarkFlib's Today I Learned 2024 
+  </a>
+    <div><div class="ananke-socials"></div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>
